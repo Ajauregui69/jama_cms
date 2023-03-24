@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "autores",
+  "info": {
+    "singularName": "autore",
+    "pluralName": "autores",
+    "displayName": "autores"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "abilities": {
+      "type": "richtext"
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "github": {
+      "type": "string"
+    },
+    "facebook": {
+      "type": "string"
+    },
+    "blog_entries": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::blog-entry.blog-entry",
+      "mappedBy": "autors"
+    },
+    "blog_cards": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::blog-card.blog-card",
+      "mappedBy": "autores"
+    }
+  }
+}

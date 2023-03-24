@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blog_cards",
+  "info": {
+    "singularName": "blog-card",
+    "pluralName": "blog-cards",
+    "displayName": "blog-cards"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "area": {
+      "type": "string"
+    },
+    "blog_entry": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::blog-entry.blog-entry",
+      "inversedBy": "blog_card"
+    },
+    "autores": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::autore.autore",
+      "inversedBy": "blog_cards"
+    }
+  }
+}
