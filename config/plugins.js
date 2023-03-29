@@ -1,9 +1,3 @@
-module.exports = ({ env }) => ({
-    "vercel-deploy": {
-      enabled: true,
-    },
-  });
-
   module.exports = ({ env }) => ({
     "vercel-deploy": {
       enabled: true,
