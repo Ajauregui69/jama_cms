@@ -45,11 +45,14 @@
       "type": "richtext",
       "required": true
     },
-    "blog_card": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::blog-card.blog-card",
-      "mappedBy": "blog_entry"
+    "area": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "intro": {
+      "type": "text"
     }
   }
 }

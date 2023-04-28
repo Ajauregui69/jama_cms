@@ -4,21 +4,45 @@
   "info": {
     "singularName": "blog-card",
     "pluralName": "blog-cards",
-    "displayName": "blog-cards"
+    "displayName": "blog-cards",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "imageBSC": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "date": {
+      "type": "date"
+    },
+    "description": {
+      "type": "richtext"
+    },
     "area": {
       "type": "string"
     },
-    "blog_entry": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::blog-entry.blog-entry",
-      "inversedBy": "blog_card"
+    "intro": {
+      "type": "text"
+    },
+    "subtheme": {
+      "type": "json"
     },
     "autores": {
       "type": "relation",
